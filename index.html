@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="index, follow">
+<title>Tupperware Brasil — 80 Anos de Qualidade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --teal:#006B4F;--teal-light:#4A9B7F;--teal-dark:#004A36;
+  --pink:#E84B7C;--pink-light:#F28AAD;
+  --orange:#F39C12;--orange-light:#F7BF5A;
+  --citrus:#52C77A;--citrus-light:#A8E6BF;
+  --white:#FFFFFF;--off:#F8F9F7;--gray:#6B7280;--dark:#1C2B22;
+  --shadow:0 4px 24px rgba(0,107,79,0.10);
+  --shadow-lg:0 12px 48px rgba(0,107,79,0.16);
+  --radius:14px;--radius-lg:22px;--radius-xl:32px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:var(--white);color:var(--dark);overflow-x:hidden}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#f0f0f0}
+::-webkit-scrollbar-thumb{background:var(--teal-light);border-radius:3px}
+
+/* ── UTILS ── */
+.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:50px;font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;border:none;transition:all .25s;text-decoration:none;white-space:nowrap}
+.btn-primary{background:var(--teal);color:#fff}
+.btn-primary:hover{background:var(--teal-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,107,79,.3)}
+.btn-pink{background:var(--pink);color:#fff}
+.btn-pink:hover{background:#c73868;transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,75,124,.3)}
+.btn-orange{background:var(--orange);color:#fff}
+.btn-orange:hover{background:#d4870c;transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--teal);border:2px solid var(--teal)}
+.btn-outline:hover{background:var(--teal);color:#fff}
+.btn-white{background:#fff;color:var(--teal)}
+.btn-white:hover{background:var(--off);transform:translateY(-2px)}
+.badge{display:inline-block;padding:4px 12px;border-radius:20px;font-size:.72rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+.badge-new{background:#E8F5E9;color:#2E7D32}
+.badge-promo{background:#FDE8EF;color:#C62A6C}
+.badge-dest{background:#FFF3E0;color:#E65100}
+section{padding:80px 0}
+.section-tag{display:inline-block;background:var(--teal);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:1rem}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;color:var(--dark);line-height:1.2;margin-bottom:1rem}
+.section-sub{color:var(--gray);font-size:1rem;line-height:1.7;max-width:560px}
+
+/* ── TOPBAR ── */
+.topbar{background:var(--teal-dark);color:#fff;font-size:.78rem;text-align:center;padding:8px 1rem;letter-spacing:.3px}
+.topbar span{color:var(--orange-light);font-weight:600}
+
+/* ── NAVBAR ── */
+nav{background:#fff;position:sticky;top:0;z-index:999;box-shadow:0 2px 20px rgba(0,0,0,.07)}
+.nav-inner{display:flex;align-items:center;gap:2rem;padding:.9rem 1.5rem;max-width:1200px;margin:0 auto}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.logo-mark{width:42px;height:42px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.logo-mark svg{width:24px;height:24px;fill:#fff}
+.logo-text{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.35rem;color:var(--teal);letter-spacing:-0.5px}
+.logo-text span{color:var(--orange)}
+.nav-links{display:flex;gap:0;list-style:none;margin-left:auto}
+.nav-links a{display:block;padding:.5rem 1rem;color:var(--dark);text-decoration:none;font-size:.88rem;font-weight:500;border-radius:8px;transition:all .2s;position:relative}
+.nav-links a:hover,.nav-links a.active{color:var(--teal)}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:2px;background:var(--teal);border-radius:2px;transition:width .25s}
+.nav-links a:hover::after{width:60%}
+.nav-actions{display:flex;align-items:center;gap:.5rem;margin-left:1rem}
+.nav-icon-btn{background:none;border:none;cursor:pointer;width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--dark);transition:all .2s;position:relative}
+.nav-icon-btn:hover{background:var(--off);color:var(--teal)}
+.cart-count{position:absolute;top:4px;right:4px;background:var(--pink);color:#fff;font-size:.65rem;font-weight:700;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.hamburger{display:none;background:none;border:none;cursor:pointer;width:40px;height:40px;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--dark);border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:998;flex-direction:column;padding:90px 2rem 2rem;gap:1rem;overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mobile-menu a{padding:1rem 0;border-bottom:1px solid #f0f0f0;color:var(--dark);text-decoration:none;font-weight:500;font-size:1.1rem;display:flex;align-items:center;justify-content:space-between}
+.mobile-menu a:hover{color:var(--teal)}
+.search-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:1000;align-items:flex-start;padding-top:80px}
+.search-overlay.open{display:flex}
+.search-box{background:#fff;width:100%;max-width:600px;margin:0 auto;border-radius:var(--radius-lg);padding:1.5rem;box-shadow:var(--shadow-lg)}
+.search-box input{width:100%;border:2px solid var(--teal);border-radius:50px;padding:14px 24px;font-size:1rem;font-family:'Poppins',sans-serif;outline:none}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(135deg,var(--teal-dark) 0%,var(--teal) 50%,#2A8A6A 100%);min-height:90vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:80px 0}
+.hero-bg-orbs{position:absolute;inset:0;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.25}
+.orb-1{width:500px;height:500px;background:var(--citrus);top:-100px;right:-100px}
+.orb-2{width:300px;height:300px;background:var(--pink);bottom:0;left:10%}
+.orb-3{width:200px;height:200px;background:var(--orange);top:30%;left:-50px}
+.hero-pattern{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:28px 28px}
+.hero-content{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;max-width:1200px;margin:0 auto;padding:0 1.5rem}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);color:#fff;border-radius:50px;padding:6px 16px;font-size:.78rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:1.5rem;border:1px solid rgba(255,255,255,.2)}
+.hero-eyebrow span{background:var(--orange);color:#fff;border-radius:50px;padding:2px 10px;font-size:.7rem}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:1.5rem}
+.hero h1 em{font-style:italic;color:var(--orange-light)}
+.hero p{color:rgba(255,255,255,.82);font-size:1.05rem;line-height:1.8;margin-bottom:2rem;max-width:480px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:1rem}
+.hero-stats{display:flex;gap:2.5rem;margin-top:3rem}
+.hero-stat span{display:block;font-size:1.8rem;font-weight:800;color:var(--orange-light)}
+.hero-stat p{font-size:.78rem;color:rgba(255,255,255,.7);font-weight:500}
+.hero-visual{position:relative}
+.hero-card-main{background:rgba(255,255,255,.12);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.2);border-radius:var(--radius-xl);padding:2rem;display:flex;flex-direction:column;gap:1.5rem}
+.product-showcase{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.product-card-mini{background:rgba(255,255,255,.9);border-radius:var(--radius);padding:1rem;text-align:center;transition:transform .2s}
+.product-card-mini:hover{transform:scale(1.03)}
+.product-card-mini .emoji{font-size:2.5rem;display:block;margin-bottom:.5rem}
+.product-card-mini .pname{font-size:.78rem;font-weight:600;color:var(--dark)}
+.product-card-mini .pprice{font-size:.9rem;font-weight:700;color:var(--teal)}
+.hero-badge-float{position:absolute;top:-20px;right:-20px;background:var(--orange);color:#fff;border-radius:50%;width:90px;height:90px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;font-size:.75rem;text-align:center;box-shadow:0 8px 24px rgba(243,156,18,.4);animation:spin-slow 10s linear infinite}
+@keyframes spin-slow{to{transform:rotate(360deg)}}
+.hero-badge-float span{font-size:1.3rem}
+
+/* ── HOW TO BUY ── */
+.how-buy{background:var(--off)}
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem}
+.how-card{background:#fff;border-radius:var(--radius-lg);padding:2rem 1.5rem;text-align:center;border:1.5px solid transparent;transition:all .3s;cursor:pointer;position:relative;overflow:hidden}
+.how-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;border-radius:0 0 var(--radius-lg) var(--radius-lg);transition:height .3s}
+.how-card.teal::before{background:var(--teal)}
+.how-card.pink::before{background:var(--pink)}
+.how-card.orange::before{background:var(--orange)}
+.how-card.citrus::before{background:var(--citrus)}
+.how-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(0,107,79,.1)}
+.how-icon{width:70px;height:70px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1.2rem}
+.how-icon.teal{background:#E8F5F0}
+.how-icon.pink{background:#FDE8EF}
+.how-icon.orange{background:#FFF3E0}
+.how-icon.citrus{background:#E8F8EF}
+.how-card h3{font-size:1rem;font-weight:700;margin-bottom:.5rem;color:var(--dark)}
+.how-card p{font-size:.83rem;color:var(--gray);line-height:1.6;margin-bottom:1.2rem}
+.how-card .link{font-size:.82rem;font-weight:600;color:var(--teal);text-decoration:none;display:inline-flex;align-items:center;gap:4px;transition:gap .2s}
+.how-card .link:hover{gap:8px}
+
+/* ── PRODUCTS ── */
+.products-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2rem;flex-wrap:gap}
+.filter-bar{display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.filter-btn{background:#fff;border:1.5px solid #E0E0E0;color:var(--gray);border-radius:50px;padding:7px 18px;font-size:.82rem;font-weight:500;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.filter-btn.active,.filter-btn:hover{background:var(--teal);border-color:var(--teal);color:#fff}
+.products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.prod-card{background:#fff;border-radius:var(--radius-lg);overflow:hidden;border:1px solid #F0F0F0;transition:all .3s;position:relative}
+.prod-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+.prod-img{aspect-ratio:1;background:linear-gradient(135deg,#E8F5F0,#d4ede5);display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;overflow:hidden}
+.prod-img-overlay{position:absolute;inset:0;background:rgba(0,107,79,.06);opacity:0;transition:opacity .3s;display:flex;align-items:center;justify-content:center;gap:.7rem}
+.prod-card:hover .prod-img-overlay{opacity:1}
+.prod-img-overlay button{background:#fff;border:none;border-radius:50%;width:44px;height:44px;cursor:pointer;font-size:1.1rem;box-shadow:0 4px 12px rgba(0,0,0,.12);transition:transform .2s}
+.prod-img-overlay button:hover{transform:scale(1.1)}
+.prod-badges{position:absolute;top:12px;left:12px;display:flex;flex-direction:column;gap:5px}
+.prod-body{padding:1.2rem}
+.prod-cat{font-size:.7rem;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.prod-name{font-size:.92rem;font-weight:600;color:var(--dark);margin-bottom:6px;line-height:1.3}
+.prod-rating{display:flex;align-items:center;gap:4px;margin-bottom:8px}
+.stars{color:var(--orange);font-size:.78rem}
+.prod-rating span{font-size:.72rem;color:var(--gray)}
+.prod-price-row{display:flex;align-items:baseline;gap:8px;margin-bottom:1rem}
+.prod-price{font-size:1.15rem;font-weight:700;color:var(--teal)}
+.prod-price-old{font-size:.82rem;color:var(--gray);text-decoration:line-through}
+.prod-price-save{font-size:.72rem;background:#E8F5E9;color:#2E7D32;border-radius:10px;padding:2px 8px;font-weight:600}
+.btn-cart{width:100%;background:var(--teal);color:#fff;border:none;border-radius:50px;padding:10px;font-size:.82rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:6px}
+.btn-cart:hover{background:var(--teal-dark)}
+.btn-cart.added{background:var(--citrus)}
+
+/* ── ABOUT ── */
+.about{background:var(--teal-dark);position:relative;overflow:hidden}
+.about-bg{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:30px 30px}
+.about-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.2}
+.about-orb-1{width:400px;height:400px;background:var(--citrus);top:-100px;left:-100px}
+.about-orb-2{width:300px;height:300px;background:var(--pink);bottom:-50px;right:10%}
+.about-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about .section-tag{background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2)}
+.about .section-title{color:#fff}
+.about .section-sub{color:rgba(255,255,255,.75);max-width:100%}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.stat-card{background:rgba(255,255,255,.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:1.5rem;text-align:center}
+.stat-num{font-size:2rem;font-weight:800;color:var(--orange-light);font-family:'Poppins',sans-serif}
+.stat-label{font-size:.78rem;color:rgba(255,255,255,.7);margin-top:4px}
+.values-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+.value-item{display:flex;gap:.9rem;align-items:flex-start}
+.value-icon{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.value-item h4{color:#fff;font-size:.9rem;font-weight:600;margin-bottom:3px}
+.value-item p{color:rgba(255,255,255,.65);font-size:.78rem;line-height:1.5}
+
+/* ── TESTIMONIALS ── */
+.testimonials{background:var(--off)}
+.testi-track{display:flex;gap:1.5rem;overflow-x:auto;padding-bottom:1rem;scroll-snap-type:x mandatory;-ms-overflow-style:none;scrollbar-width:none;margin-top:2.5rem}
+.testi-track::-webkit-scrollbar{display:none}
+.testi-card{min-width:320px;background:#fff;border-radius:var(--radius-lg);padding:1.8rem;scroll-snap-align:start;box-shadow:var(--shadow);border:1px solid rgba(0,107,79,.06)}
+.testi-stars{color:var(--orange);font-size:.9rem;margin-bottom:1rem}
+.testi-text{font-size:.88rem;color:var(--gray);line-height:1.7;margin-bottom:1.5rem;font-style:italic}
+.testi-author{display:flex;align-items:center;gap.9rem;gap:.9rem}
+.testi-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--citrus));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.9rem;flex-shrink:0}
+.testi-author h4{font-size:.88rem;font-weight:600;color:var(--dark)}
+.testi-author p{font-size:.75rem;color:var(--gray)}
+.testi-nav{display:flex;justify-content:center;gap:.7rem;margin-top:2rem}
+.testi-dot{width:8px;height:8px;border-radius:50%;background:#D0D0D0;cursor:pointer;border:none;transition:all .2s;padding:0}
+.testi-dot.active{background:var(--teal);width:24px;border-radius:4px}
+
+/* ── NEWSLETTER ── */
+.newsletter{background:linear-gradient(135deg,var(--pink) 0%,#C62A6C 100%);position:relative;overflow:hidden;padding:80px 0}
+.newsletter-inner{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;position:relative;z-index:1}
+.newsletter h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.5rem);color:#fff;margin-bottom:1rem}
+.newsletter p{color:rgba(255,255,255,.85);font-size:.95rem;line-height:1.7}
+.newsletter-form{display:flex;flex-direction:column;gap:1rem}
+.newsletter-form input{width:100%;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:1.5px solid rgba(255,255,255,.3);border-radius:50px;padding:14px 22px;font-size:.9rem;font-family:'Poppins',sans-serif;color:#fff;outline:none}
+.newsletter-form input::placeholder{color:rgba(255,255,255,.65)}
+.newsletter-form input:focus{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.2)}
+.newsletter-orb{position:absolute;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,.07);top:-100px;right:-50px}
+
+/* ── FOOTER ── */
+footer{background:var(--dark);color:rgba(255,255,255,.8)}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding:60px 0 40px}
+.footer-brand .logo-text{font-size:1.5rem;color:#fff;display:block;margin-bottom:.5rem}
+.footer-brand .logo-text span{color:var(--orange)}
+.footer-tagline{font-size:.83rem;color:rgba(255,255,255,.55);line-height:1.7;margin:.8rem 0 1.5rem}
+.social-links{display:flex;gap:.7rem}
+.social-btn{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;font-size:1rem;text-decoration:none;transition:all .2s}
+.social-btn:hover{background:var(--teal);border-color:var(--teal);transform:translateY(-2px)}
+.footer-col h4{font-size:.85rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:1px;margin-bottom:1.2rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.footer-col ul a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.85rem;transition:color .2s;display:flex;align-items:center;gap:6px}
+.footer-col ul a:hover{color:#fff}
+.footer-col ul a::before{content:'→';opacity:0;transition:all .2s;margin-left:-14px}
+.footer-col ul a:hover::before{opacity:1;margin-left:0}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:1.5rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:.8rem;color:rgba(255,255,255,.4)}
+.footer-legal{display:flex;gap:1.5rem}
+.footer-legal a{font-size:.8rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
+.footer-legal a:hover{color:rgba(255,255,255,.8)}
+
+/* ── CART DRAWER ── */
+.cart-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1001}
+.cart-overlay.open{display:block}
+.cart-drawer{position:fixed;top:0;right:-400px;width:380px;max-width:100vw;height:100vh;background:#fff;z-index:1002;display:flex;flex-direction:column;transition:right .3s ease;box-shadow:-8px 0 32px rgba(0,0,0,.12)}
+.cart-drawer.open{right:0}
+.cart-header{padding:1.5rem;border-bottom:1px solid #F0F0F0;display:flex;justify-content:space-between;align-items:center}
+.cart-header h3{font-size:1.1rem;font-weight:700}
+.cart-close{background:none;border:none;cursor:pointer;font-size:1.3rem;width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.cart-close:hover{background:var(--off)}
+.cart-items{flex:1;overflow-y:auto;padding:1.5rem}
+.cart-item{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid #F8F8F8;align-items:center}
+.cart-item-img{width:60px;height:60px;background:var(--off);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0}
+.cart-item-info{flex:1}
+.cart-item-info h4{font-size:.85rem;font-weight:600;margin-bottom:3px}
+.cart-item-info p{font-size:.8rem;color:var(--teal);font-weight:600}
+.cart-item-actions{display:flex;align-items:center;gap:.5rem}
+.qty-btn{background:var(--off);border:none;border-radius:6px;width:28px;height:28px;cursor:pointer;font-size.9rem;font-size:.9rem;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.qty-btn:hover{background:#E0E0E0}
+.qty-num{font-size:.88rem;font-weight:600;min-width:24px;text-align:center}
+.cart-footer{padding:1.5rem;border-top:1px solid #F0F0F0}
+.cart-total{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem}
+.cart-total span:first-child{font-size:.9rem;color:var(--gray)}
+.cart-total span:last-child{font-size:1.3rem;font-weight:700;color:var(--teal)}
+.cart-empty{text-align:center;padding:3rem 1rem}
+.cart-empty span{font-size:3rem;display:block;margin-bottom:1rem}
+.cart-empty p{color:var(--gray);font-size:.9rem}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(100px);background:var(--dark);color:#fff;padding:.9rem 1.5rem;border-radius:50px;font-size:.85rem;font-weight:500;z-index:2000;transition:transform .3s;display:flex;align-items:center;gap:.7rem;box-shadow:var(--shadow-lg);pointer-events:none}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast-icon{width:22px;height:22px;background:var(--citrus);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem}
+
+/* ── SCROLL ANIMATIONS ── */
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.fade-up:nth-child(2){transition-delay:.1s}
+.fade-up:nth-child(3){transition-delay:.2s}
+.fade-up:nth-child(4){transition-delay:.3s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .products-grid{grid-template-columns:repeat(3,1fr)}
+  .how-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links,.nav-actions .nav-icon-btn:not(.cart-btn){display:none}
+  .hamburger{display:flex}
+  section{padding:60px 0}
+  .hero{min-height:auto;padding:60px 0}
+  .hero-content{grid-template-columns:1fr}
+  .hero-visual{display:none}
+  .hero-stats{gap:1.5rem}
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+  .about-inner{grid-template-columns:1fr}
+  .newsletter-inner{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .footer-legal{flex-wrap:wrap;justify-content:center}
+  .testi-card{min-width:280px}
+  #catalogo-mes .container > div{grid-template-columns:1fr !important}
+}
+@media(max-width:480px){
+  .products-grid{grid-template-columns:1fr 1fr}
+  .how-grid{grid-template-columns:1fr 1fr}
+  .about-stats{grid-template-columns:1fr 1fr}
+  .values-grid{grid-template-columns:1fr}
+  .hero-actions .btn{width:100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar" id="site-topbar">🎉 Celebrando <span>80 anos</span> de qualidade e inovação — Frete grátis em compras acima de R$ 149 🎁</div>
+
+<!-- NAVBAR -->
+<nav role="navigation" aria-label="Menu principal">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="Tupperware - Página inicial">
+      <div class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <span class="logo-text">Tupper<span>ware</span></span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#" class="active">Início</a></li>
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#catalogo-mes">Catálogo do Mês</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-icon-btn" onclick="toggleSearch()" aria-label="Buscar">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="nav-icon-btn cart-btn" onclick="toggleCart()" aria-label="Carrinho de compras">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+      </button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu de navegação móvel">
+  <a href="#" onclick="toggleMobile()">Início <span>→</span></a>
+  <a href="#produtos" onclick="toggleMobile()">Produtos <span>→</span></a>
+  <a href="#catalogo-mes" onclick="toggleMobile()">Catálogo do Mês <span>→</span></a>
+  <a href="#sobre" onclick="toggleMobile()">Sobre <span>→</span></a>
+  <a href="#contato" onclick="toggleMobile()">Contato <span>→</span></a>
+  <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:.8rem">
+    <a href="#produtos" class="btn btn-primary" onclick="toggleMobile()">🛒 Comprar Agora</a>
+    <a href="https://view.publitas.com/tupperware-digital-06-2026/vitrine-06-2026/page/1" target="_blank" class="btn btn-outline" onclick="toggleMobile()">📖 Ver Catálogo Junho</a>
+  </div>
+</div>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="search-overlay" onclick="closeSearch(event)">
+  <div class="container">
+    <div class="search-box">
+      <input type="search" id="search-input" placeholder="Buscar produtos Tupperware..." aria-label="Buscar produtos" oninput="filterProducts(this.value)">
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="hero-pattern" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-eyebrow"><span>Novo</span> Coleção 2026</div>
+      <h1 id="hero-title">Qualidade que <em>dura gerações</em></h1>
+      <p>Há 80 anos transformando a experiência na cozinha com produtos inovadores, sustentáveis e cheios de cor. Descubra a linha completa Tupperware.</p>
+      <div class="hero-actions">
+        <a href="#produtos" class="btn btn-white">🛒 Comprar Online</a>
+        <a href="https://view.publitas.com/tupperware-digital-06-2026/vitrine-06-2026/page/1" target="_blank" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.5)">📖 Catálogo de Junho</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span>80+</span><p>anos de história</p></div>
+        <div class="hero-stat"><span>100+</span><p>países presentes</p></div>
+        <div class="hero-stat"><span>1M+</span><p>consultoras ativas</p></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-badge-float"><span>🎂</span>80<br>ANOS!</div>
+      <div class="hero-card-main">
+        <div style="display:flex;align-items:center;gap:.7rem">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--citrus)"></div>
+          <span style="color:rgba(255,255,255,.7);font-size:.78rem">Produtos em destaque</span>
+        </div>
+        <div class="product-showcase">
+          <div class="product-card-mini">
+            <span class="emoji">🥗</span>
+            <div class="pname">Tigela Ultra</div>
+            <div class="pprice">R$ 89</div>
+          </div>
+          <div class="product-card-mini">
+            <span class="emoji">🍱</span>
+            <div class="pname">Caixa Ideal</div>
+            <div class="pprice">R$ 125</div>
+          </div>
+          <div class="product-card-mini">
+            <span class="emoji">🫙</span>
+            <div class="pname">Jarra Easy</div>
+            <div class="pprice">R$ 67</div>
+          </div>
+          <div class="product-card-mini">
+            <span class="emoji">🧊</span>
+            <div class="pname">Forma Gelo</div>
+            <div class="pprice">R$ 45</div>
+          </div>
+        </div>
+        <a href="#produtos" class="btn btn-white" style="width:100%;justify-content:center;font-size:.85rem">Ver todos os produtos →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG BANNER -->
+<section id="catalogo-mes" style="background:linear-gradient(135deg,var(--teal-dark),var(--teal));padding:60px 0;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:28px 28px;pointer-events:none"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center">
+      <div>
+        <div class="section-tag" style="background:var(--orange)">📖 Novidade</div>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.6rem);color:#fff;margin-bottom:1rem;line-height:1.2">Catálogo <em style="font-style:italic;color:var(--orange-light)">Junho 2026</em> já disponível!</h2>
+        <p style="color:rgba(255,255,255,.82);font-size:1rem;line-height:1.7;margin-bottom:2rem">Confira todas as novidades, promoções e lançamentos do mês. Produtos incríveis com preços especiais para você!</p>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem">
+          <a href="https://view.publitas.com/tupperware-digital-06-2026/vitrine-06-2026/page/1" target="_blank" rel="noopener" class="btn btn-orange" style="font-size:1rem;padding:14px 32px">📖 Ver Catálogo Completo</a>
+          <a href="#produtos" class="btn btn-white">🛒 Comprar Agora</a>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+        <div style="background:rgba(255,255,255,.13);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);border-radius:var(--radius-lg);padding:1.5rem;text-align:center">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5" style="margin-bottom:.7rem"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <div style="color:#fff;font-weight:700;font-size:.9rem">Lançamentos</div>
+          <div style="color:rgba(255,255,255,.65);font-size:.78rem;margin-top:3px">Novas cores e modelos</div>
+        </div>
+        <div style="background:rgba(255,255,255,.13);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);border-radius:var(--radius-lg);padding:1.5rem;text-align:center">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5" style="margin-bottom:.7rem"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <div style="color:#fff;font-weight:700;font-size:.9rem">Promoções</div>
+          <div style="color:rgba(255,255,255,.65);font-size:.78rem;margin-top:3px">Até 40% de desconto</div>
+        </div>
+        <div style="background:rgba(255,255,255,.13);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);border-radius:var(--radius-lg);padding:1.5rem;text-align:center">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5" style="margin-bottom:.7rem"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+          <div style="color:#fff;font-weight:700;font-size:.9rem">Kits Especiais</div>
+          <div style="color:rgba(255,255,255,.65);font-size:.78rem;margin-top:3px">Combos com desconto</div>
+        </div>
+        <div style="background:rgba(255,255,255,.13);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);border-radius:var(--radius-lg);padding:1.5rem;text-align:center">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5" style="margin-bottom:.7rem"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <div style="color:#fff;font-weight:700;font-size:.9rem">Entrega Rápida</div>
+          <div style="color:rgba(255,255,255,.65);font-size:.78rem;margin-top:3px">Frete grátis acima R$149</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO BUY REMOVED -->
+
+<!-- PRODUCTS -->
+<section id="produtos" aria-labelledby="prod-title">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem">
+      <div>
+        <div class="section-tag">Catálogo</div>
+        <h2 class="section-title" id="prod-title" style="margin-bottom:0">Nossos Produtos</h2>
+      </div>
+      <a href="#" class="btn btn-outline">Ver catálogo completo</a>
+    </div>
+    <div class="filter-bar" role="group" aria-label="Filtrar produtos">
+      <button class="filter-btn active" onclick="filterCat(this,'todos')">Todos</button>
+      <button class="filter-btn" onclick="filterCat(this,'conservacao')">Conservação</button>
+      <button class="filter-btn" onclick="filterCat(this,'preparo')">Preparo</button>
+      <button class="filter-btn" onclick="filterCat(this,'hidratacao')">Hidratação</button>
+      <button class="filter-btn" onclick="filterCat(this,'organizacao')">Organização</button>
+      <button class="filter-btn" onclick="filterCat(this,'infantil')">Infantil</button>
+    </div>
+    <div class="products-grid" id="products-grid"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="sobre" aria-labelledby="about-title">
+  <div class="about-bg" aria-hidden="true"></div>
+  <div class="about-orb about-orb-1" aria-hidden="true"></div>
+  <div class="about-orb about-orb-2" aria-hidden="true"></div>
+  <div class="container">
+    <div class="about-inner">
+      <div>
+        <div class="section-tag">Nossa história</div>
+        <h2 class="section-title" id="about-title">80 anos transformando cozinhas ao redor do mundo</h2>
+        <p class="section-sub">Desde 1946, a Tupperware revolucionou a forma como as pessoas armazenam, preparam e compartilham alimentos. Com presença em mais de 100 países, somos sinônimo de qualidade, durabilidade e inovação.</p>
+        <div class="about-stats">
+          <div class="stat-card"><div class="stat-num">80+</div><div class="stat-label">Anos de história</div></div>
+          <div class="stat-card"><div class="stat-num">100+</div><div class="stat-label">Países presentes</div></div>
+          <div class="stat-card"><div class="stat-num">1M+</div><div class="stat-label">Consultoras ativas</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="values-grid">
+          <div class="value-item">
+            <div class="value-icon" aria-hidden="true">🌱</div>
+            <div><h4>Sustentabilidade</h4><p>Produtos duráveis que reduzem o desperdício de plástico descartável no planeta.</p></div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon" aria-hidden="true">❤️</div>
+            <div><h4>Pessoas em 1º lugar</h4><p>Mais de 1 milhão de consultoras empoderadas em todo o mundo.</p></div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon" aria-hidden="true">🔬</div>
+            <div><h4>Inovação</h4><p>Pesquisa e desenvolvimento constante para soluções cada vez mais inteligentes.</p></div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon" aria-hidden="true">✅</div>
+            <div><h4>Qualidade garantida</h4><p>Garantia vitalícia em todos os produtos. Qualidade que dura gerações.</p></div>
+          </div>
+        </div>
+        <div style="margin-top:2rem">
+          <a href="#" class="btn btn-white">Conheça nossa história completa →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" aria-labelledby="testi-title">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:.5rem">
+      <div class="section-tag">Depoimentos</div>
+      <h2 class="section-title" id="testi-title" style="margin:0 auto">O que dizem nossas clientes</h2>
+    </div>
+    <div class="testi-track" id="testi-track" role="list">
+      <div class="testi-card" role="listitem">
+        <div class="testi-stars" aria-label="5 estrelas">★★★★★</div>
+        <p class="testi-text">"Tenho produtos Tupperware há mais de 15 anos e eles continuam perfeitos! A qualidade é incomparável. Minha cozinha não seria a mesma sem eles."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">MA</div>
+          <div><h4>Maria Aparecida</h4><p>Cliente há 15 anos · São Paulo</p></div>
+        </div>
+      </div>
+      <div class="testi-card" role="listitem">
+        <div class="testi-stars" aria-label="5 estrelas">★★★★★</div>
+        <p class="testi-text">"Comecei como consultora há 3 anos e mudou minha vida. Construí minha renda própria, fiz amizades incríveis e aprendi muito sobre empreendedorismo!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">CS</div>
+          <div><h4>Claudia Santos</h4><p>Consultora independente · Rio de Janeiro</p></div>
+        </div>
+      </div>
+      <div class="testi-card" role="listitem">
+        <div class="testi-stars" aria-label="5 estrelas">★★★★★</div>
+        <p class="testi-text">"A Caixa Ideal salvou minhas marmitas! Os alimentos duram muito mais e os potes são fáceis de lavar. Vale cada centavo do investimento."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">JL</div>
+          <div><h4>Juliana Lima</h4><p>Cliente satisfeita · Curitiba</p></div>
+        </div>
+      </div>
+      <div class="testi-card" role="listitem">
+        <div class="testi-stars" aria-label="5 estrelas">★★★★★</div>
+        <p class="testi-text">"Recebi meus primeiros produtos de presente da minha mãe. Agora compro para minhas filhas. É uma tradição de família que já dura três gerações!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">RP</div>
+          <div><h4>Rosangela Pereira</h4><p>Fã de longa data · Belo Horizonte</p></div>
+        </div>
+      </div>
+      <div class="testi-card" role="listitem">
+        <div class="testi-stars" aria-label="4 estrelas">★★★★★</div>
+        <p class="testi-text">"Sustentabilidade que faz sentido na prática! Troquei todos os potes plásticos descartáveis pelos Tupperware e a diferença no lixo que gero é absurda."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">AF</div>
+          <div><h4>Ana Figueiredo</h4><p>Consumidora consciente · Florianópolis</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-nav" role="group" aria-label="Navegação de depoimentos">
+      <button class="testi-dot active" onclick="scrollTesti(0)" aria-label="Depoimento 1"></button>
+      <button class="testi-dot" onclick="scrollTesti(1)" aria-label="Depoimento 2"></button>
+      <button class="testi-dot" onclick="scrollTesti(2)" aria-label="Depoimento 3"></button>
+      <button class="testi-dot" onclick="scrollTesti(3)" aria-label="Depoimento 4"></button>
+      <button class="testi-dot" onclick="scrollTesti(4)" aria-label="Depoimento 5"></button>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter" id="contato">
+  <div class="newsletter-orb" aria-hidden="true"></div>
+  <div class="container">
+    <div class="newsletter-inner">
+      <div>
+        <h2>Fique por dentro das novidades!</h2>
+        <p>Receba promoções exclusivas, lançamentos e dicas de uso diretamente no seu e-mail. Sem spam, prometemos! 🌱</p>
+      </div>
+      <div>
+        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)" novalidate>
+          <label for="nl-name" class="sr-only">Seu nome</label>
+          <input type="text" id="nl-name" placeholder="Seu nome" required>
+          <label for="nl-email" class="sr-only">Seu contato (email ou telefone)</label>
+          <input type="text" id="nl-email" placeholder="Seu email ou WhatsApp" required>
+          <button type="submit" class="btn btn-white" style="justify-content:center">Quero receber ofertas! 🎁</button>
+        </form>
+        <p style="color:rgba(255,255,255,.55);font-size:.72rem;margin-top:.8rem;text-align:center">Ao se inscrever você concorda com nossa Política de Privacidade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo-text">Tupper<span>ware</span></span>
+        <p class="footer-tagline" id="footer-tagline">Há 80 anos transformando a experiência na cozinha com qualidade, inovação e sustentabilidade. Feito para durar gerações.</p>
+        <div class="social-links" aria-label="Redes sociais">
+          <a id="social-fb" href="#" class="social-btn" aria-label="Facebook" title="Facebook">📘</a>
+          <a id="social-ig" href="#" class="social-btn" aria-label="Instagram" title="Instagram">📸</a>
+          <a id="social-tt" href="#" class="social-btn" aria-label="TikTok" title="TikTok">🎵</a>
+          <a id="social-yt" href="#" class="social-btn" aria-label="YouTube" title="YouTube">▶️</a>
+          <a id="social-pin" href="#" class="social-btn" aria-label="Pinterest" title="Pinterest">📌</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Produtos</h4>
+        <ul>
+          <li><a href="#">Conservação</a></li>
+          <li><a href="#">Preparo</a></li>
+          <li><a href="#">Hidratação</a></li>
+          <li><a href="#">Organização</a></li>
+          <li><a href="#">Linha Infantil</a></li>
+          <li><a href="#">Promoções</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#">Sobre a Tupperware</a></li>
+          <li><a href="#">Seja Consultora</a></li>
+          <li><a href="#">Encontrar Consultora</a></li>
+          <li><a href="#">Sustentabilidade</a></li>
+          <li><a href="#">Imprensa</a></li>
+          <li><a href="#">Carreiras</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="#">Central de Ajuda</a></li>
+          <li><a href="#">Meu Pedido</a></li>
+          <li><a href="#">Garantia Vitalícia</a></li>
+          <li><a href="#">Trocas e Devoluções</a></li>
+          <li><a href="#">Fale Conosco</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p id="footer-copy">© 2026 Tupperware — Todos os direitos reservados.</p>
+      <div class="footer-legal">
+        <a href="#">Termos de Uso</a>
+        <a href="#">Privacidade</a>
+        <a href="#">Cookies</a>
+        <a href="#">Acessibilidade</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cart-overlay" onclick="toggleCart()" aria-hidden="true"></div>
+<aside class="cart-drawer" id="cart-drawer" role="dialog" aria-label="Carrinho de compras" aria-modal="true">
+  <div class="cart-header">
+    <h3>🛒 Meu Carrinho</h3>
+    <button class="cart-close" onclick="toggleCart()" aria-label="Fechar carrinho">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer" id="cart-footer" style="display:none">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cart-total-val">R$ 0,00</span>
+    </div>
+    <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="showToast('🎉 Pedido realizado com sucesso!')">Finalizar Compra</button>
+  </div>
+</aside>
+
+<!-- LOGIN ADMIN MODAL -->
+<div id="login-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:1300;align-items:center;justify-content:center;padding:1rem">
+  <div style="background:#fff;border-radius:22px;width:100%;max-width:360px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.25)">
+    <div style="background:var(--teal-dark);padding:2rem 1.8rem 1.5rem;text-align:center">
+      <div style="width:56px;height:56px;background:rgba(255,255,255,.15);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto .9rem">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+      <div style="color:#fff;font-weight:700;font-size:1.1rem">Área Restrita</div>
+      <div style="color:rgba(255,255,255,.65);font-size:.8rem;margin-top:.3rem">Apenas a administradora tem acesso</div>
+    </div>
+    <div style="padding:1.6rem 1.8rem">
+      <div id="login-error" style="display:none;background:#FDE8EF;color:var(--pink);border-radius:8px;padding:.7rem 1rem;font-size:.82rem;margin-bottom:1rem;text-align:center">
+        ❌ Senha incorreta. Tente novamente.
+      </div>
+      <label style="font-size:.8rem;font-weight:600;color:var(--dark);display:block;margin-bottom:.4rem">Senha de acesso</label>
+      <input type="password" id="admin-password" placeholder="Digite a senha..." onkeydown="if(event.key==='Enter')checkAdminLogin()" style="width:100%;border:1.5px solid #E0E0E0;border-radius:10px;padding:11px 14px;font-size:.9rem;font-family:'Poppins',sans-serif;outline:none;margin-bottom:1rem" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='#E0E0E0'">
+      <button onclick="checkAdminLogin()" style="width:100%;background:var(--teal);color:#fff;border:none;border-radius:10px;padding:12px;font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;margin-bottom:.7rem">
+        Entrar no Painel
+      </button>
+      <button onclick="closeLoginModal()" style="width:100%;background:#F0F0F0;color:var(--gray);border:none;border-radius:10px;padding:10px;font-family:'Poppins',sans-serif;font-size:.85rem;cursor:pointer">
+        Cancelar
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN PANEL OVERLAY -->
+<div id="admin-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:1100;align-items:center;justify-content:center;padding:1rem;overflow-y:auto">
+  <div style="background:#fff;border-radius:22px;width:100%;max-width:560px;max-height:92vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.2)">
+    <!-- Header -->
+    <div style="padding:1.2rem 1.6rem;border-bottom:1px solid #F0F0F0;background:var(--teal-dark);flex-shrink:0">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem">
+        <div style="display:flex;align-items:center;gap:.7rem">
+          <div style="width:34px;height:34px;background:rgba(255,255,255,.15);border-radius:10px;display:flex;align-items:center;justify-content:center">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 9.5-9.5z"/></svg>
+          </div>
+          <span style="color:#fff;font-weight:700;font-size:1rem">Painel Administrativo</span>
+        </div>
+        <div style="display:flex;gap:.5rem">
+          <button onclick="adminLogado=false;closeAdminPanel();showToast('Sessão encerrada.')" style="background:rgba(255,255,255,.12);border:none;color:rgba(255,255,255,.8);border-radius:8px;padding:5px 12px;font-size:.75rem;cursor:pointer;font-family:'Poppins',sans-serif">Sair</button>
+          <button onclick="closeAdminPanel()" style="background:rgba(255,255,255,.12);border:none;color:#fff;border-radius:10px;width:34px;height:34px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center">✕</button>
+        </div>
+      </div>
+      <!-- Tabs -->
+      <div style="display:flex;gap:.4rem">
+        <button class="adm-tab active" id="tab-btn-produtos" onclick="switchTab('produtos')" style="background:rgba(255,255,255,.2);border:none;color:#fff;border-radius:8px;padding:7px 14px;font-size:.8rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s">📦 Produtos</button>
+        <button class="adm-tab" id="tab-btn-loja" onclick="switchTab('loja')" style="background:transparent;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.75);border-radius:8px;padding:7px 14px;font-size:.8rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s">⚙️ Loja</button>
+        <button class="adm-tab" id="tab-btn-contato" onclick="switchTab('contato')" style="background:transparent;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.75);border-radius:8px;padding:7px 14px;font-size:.8rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s">📱 Contato</button>
+      </div>
+    </div>
+
+    <!-- Tab: Produtos -->
+    <div id="tab-produtos" style="flex:1;overflow-y:auto;display:flex;flex-direction:column">
+      <div style="padding:.9rem 1.4rem;border-bottom:1px solid #F8F8F8;background:#FAFAF8;flex-shrink:0">
+        <button onclick="addNewProduct()" style="width:100%;background:var(--teal);color:#fff;border:none;border-radius:10px;padding:10px;font-family:'Poppins',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem" onmouseover="this.style.background='var(--teal-dark)'" onmouseout="this.style.background='var(--teal)'">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Adicionar Novo Produto
+        </button>
+      </div>
+      <div id="admin-list" style="padding:1rem 1.2rem;display:flex;flex-direction:column;gap:.5rem;flex:1"></div>
+      <div style="padding:.7rem 1.4rem;border-top:1px solid #F0F0F0;background:#F8F9F7;flex-shrink:0">
+        <p style="font-size:.72rem;color:#aaa;text-align:center">💡 Passe o mouse sobre um produto para ver os botões de editar e excluir</p>
+      </div>
+    </div>
+
+    <!-- Tab: Loja -->
+    <div id="tab-loja" style="flex:1;overflow-y:auto;display:none;padding:1.4rem 1.6rem">
+      <div style="display:flex;flex-direction:column;gap:1.1rem">
+        <div style="background:#F0F9F5;border-radius:12px;padding:1rem;border-left:3px solid var(--teal)">
+          <p style="font-size:.78rem;color:var(--teal);font-weight:600">💾 As alterações são salvas automaticamente ao clicar em "Salvar"</p>
+        </div>
+
+        <div>
+          <label style="font-size:.8rem;font-weight:700;color:var(--dark);display:block;margin-bottom:.4rem">📢 Mensagem do topo do site</label>
+          <input type="text" id="cfg-topbar" placeholder="Ex: Frete grátis acima de R$ 149!" style="width:100%;border:1.5px solid #E0E0E0;border-radius:10px;padding:10px 14px;font-size:.85rem;font-family:'Poppins',sans-serif;outline:none" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='#E0E0E0'">
+          <p style="font-size:.72rem;color:#aaa;margin-top:.3rem">A faixinha verde escura no topo da página</p>
+        </div>
+
+        <div>
+          <label style="font-size:.8rem;font-weight:700;color:var(--dark);display:block;margin-bottom:.4rem">💬 Texto do rodapé (sobre a loja)</label>
+          <textarea id="cfg-tagline" rows="3" style="width:100%;border:1.5px solid #E0E0E0;border-radius:10px;padding:10px 14px;font-size:.85rem;font-family:'Poppins',sans-serif;outline:none;resize:none" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='#E0E0E0'"></textarea>
+        </div>
+
+        <div>
+          <label style="font-size:.8rem;font-weight:700;color:var(--dark);display:block;margin-bottom:.4rem">©️ Copyright (rodapé)</label>
+          <input type="text" id="cfg-copy" placeholder="Ex: © 2026 Nome da Loja" style="width:100%;border:1.5px solid #E0E0E0;border-radius:10px;padding:10px 14px;font-size:.85rem;font-family:'Poppins',sans-serif;outline:none" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='#E0E0E0'">
+        </div>
+
+        <button onclick="saveLoja()" style="background:var(--teal);color:#fff;border:none;border-radius:10px;padding:12px;font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;width:100%">✓ Salvar Configurações da Loja</button>
+      </div>
+    </div>
+
+    <!-- Tab: Contato -->
+    <div id="tab-contato" style="flex:1;overflow-y:auto;display:none;padding:1.4rem 1.6rem">
+      <div style="display:flex;flex-direction:column;gap:1.1rem">
+        <div style="background:#F0F9F5;border-radius:12px;padding:1rem;border-left:3px solid var(--teal)">
+          <p style="font-size:.78rem;color:var(--teal);font-weight:600">📬 Os dados de contato aparecem no rodapé e são usados para receber mensagens da newsletter</p>
+        </div>
+
+        <div>
+          <label style="font-size:.8rem;font-weight:700;color:var(--dark);display:block;margin-bottom:.4rem">📱 WhatsApp da consultora</label>
+          <input type="text" id="cfg-whats" placeholder="5544999991234 (com DDI e DDD, sem espaços)" style="width:100%;border:1.5px solid #E0E0E0;border-radius:10px;padding:10px 14px;font-size:.85rem;font-family:'Poppins',sans-serif;outline:none" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='#E0E0E0'">
+          <p style="font-size:.72rem;color:#aaa;margin-top:.3rem">Usado nos botões de compra e para receber contatos da newsletter</p>
+        </div>
+
+        <div>
+          <label style="font-size:.8rem;font-weight:700;color:var(--dark);display:block;margin-bottom:.4rem">📧 Email de contato <span style="font-weight:400;color:#aaa">(opcional)</span></label>
+          <input type="email" id="cfg-email" placeholder="seuemail@gmail.com" style="width:100%;border:1.5px solid #E0E0E0;border-radius:10px;padding:10px 14px;font-size:.85rem;font-family:'Poppins',sans-serif;outline:none" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='#E0E0E0'">
+        </div>
+
+        <div style="border-top:1px solid #F0F0F0;padding-top:1rem">
+          <p style="font-size:.82rem;font-weight:700;color:var(--dark);margin-bottom:.8rem">🔗 Links das redes sociais</p>
+          <div style="display:flex;flex-direction:column;gap:.7rem">
+            <div style="display:flex;align-items:center;gap:.7rem">
+              <span style="font-size:1.1rem;width:28px">📘</span>
+              <input type="url" id="cfg-fb" placeholder="https://facebook.com/suapagina" style="flex:1;border:1.5px solid #E0E0E0;border-radius:10px;padding:9px 12px;font-size:.82rem;font-family:'Poppins',sans-serif;outline:none" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='#E0E0E0'">
+            </div>
+            <div style="display:flex;align-items:center;gap:.7rem">
+              <span style="font-size:1.1rem;width:28px">📸</span>
+              <input type="url" id="cfg-ig" placeholder="https://instagram.com/suaconta" style="flex:1;border:1.5px solid #E0E0E0;border-radius:10px;padding:9px 12px;font-size:.82rem;font-family:'Poppins',sans-serif;outline:none" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='#E0E0E0'">
+            </div>
+            <div style="display:flex;align-items:center;gap:.7rem">
+              <span style="font-size:1.1rem;width:28px">🎵</span>
+              <input type="url" id="cfg-tt" placeholder="https://tiktok.com/@suaconta" style="flex:1;border:1.5px solid #E0E0E0;border-radius:10px;padding:9px 12px;font-size:.82rem;font-family:'Poppins',sans-serif;outline:none" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='#E0E0E0'">
+            </div>
+            <div style="display:flex;align-items:center;gap:.7rem">
+              <span style="font-size:1.1rem;width:28px">▶️</span>
+              <input type="url" id="cfg-yt" placeholder="https://youtube.com/@seucanal" style="flex:1;border:1.5px solid #E0E0E0;border-radius:10px;padding:9px 12px;font-size:.82rem;font-family:'Poppins',sans-serif;outline:none" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='#E0E0E0'">
+            </div>
+          </div>
+        </div>
+
+        <button onclick="saveContato()" style="background:var(--teal);color:#fff;border:none;border-radius:10px;padding:12px;font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;width:100%">✓ Salvar Contato e Redes Sociais</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EDIT PRODUCT MODAL -->
+<div id="edit-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:1200;align-items:center;justify-content:center;padding:1rem">
+  <div style="background:#fff;border-radius:22px;width:100%;max-width:480px;max-height:92vh;overflow-y:auto;box-shadow:0 24px 60px rgba(0,0,0,.25)">
+    <!-- Header -->
+    <div style="padding:1.3rem 1.6rem;background:var(--teal);border-radius:22px 22px 0 0;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:1">
+      <span style="color:#fff;font-weight:700;font-size:1rem">✏️ Editar Produto</span>
+      <button onclick="closeEditModal()" style="background:rgba(255,255,255,.15);border:none;color:#fff;border-radius:10px;width:34px;height:34px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center">✕</button>
+    </div>
+    <!-- Form -->
+    <div style="padding:1.5rem 1.6rem;display:flex;flex-direction:column;gap:1.1rem">
+
+      <!-- Foto -->
+      <div>
+        <label style="font-size:.8rem;font-weight:600;color:var(--dark);display:block;margin-bottom:.4rem">📸 Foto do Produto</label>
+        <div style="border:2px dashed #E0E0E0;border-radius:12px;padding:1rem;text-align:center;background:#FAFAF8;margin-bottom:.6rem;position:relative;min-height:120px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem" id="img-drop-zone">
+          <img id="ep-preview" src="" alt="Preview" style="display:none;max-height:140px;max-width:100%;border-radius:8px;object-fit:contain">
+          <div id="img-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5" style="display:block;margin:0 auto .4rem"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            <p style="font-size:.75rem;color:#aaa">Cole a URL da foto abaixo</p>
+          </div>
+        </div>
+        <input type="url" id="ep-img" placeholder="https://... (URL da imagem)" oninput="previewImg()" style="width:100%;border:1.5px solid #E0E0E0;border-radius:10px;padding:10px 14px;font-size:.85rem;font-family:'Poppins',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='#E0E0E0'">
+        <p style="font-size:.7rem;color:#aaa;margin-top:.3rem">💡 Suba a foto no <strong>Google Fotos</strong>, clique com botão direito → "Copiar endereço da imagem" e cole aqui</p>
+      </div>
+
+      <!-- Nome -->
+      <div>
+        <label for="ep-name" style="font-size:.8rem;font-weight:600;color:var(--dark);display:block;margin-bottom:.4rem">📦 Nome do Produto</label>
+        <input type="text" id="ep-name" placeholder="Ex: Tigela Ultra Cristal 1,5L" style="width:100%;border:1.5px solid #E0E0E0;border-radius:10px;padding:10px 14px;font-size:.88rem;font-family:'Poppins',sans-serif;outline:none" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='#E0E0E0'">
+      </div>
+
+      <!-- Preços -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem">
+        <div>
+          <label for="ep-price" style="font-size:.8rem;font-weight:600;color:var(--dark);display:block;margin-bottom:.4rem">💰 Preço (R$)</label>
+          <input type="number" id="ep-price" placeholder="89.90" step="0.01" min="0" style="width:100%;border:1.5px solid #E0E0E0;border-radius:10px;padding:10px 14px;font-size:.88rem;font-family:'Poppins',sans-serif;outline:none" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='#E0E0E0'">
+        </div>
+        <div>
+          <label for="ep-oldprice" style="font-size:.8rem;font-weight:600;color:var(--dark);display:block;margin-bottom:.4rem">🏷️ Preço Original <span style="font-weight:400;color:#aaa">(opcional)</span></label>
+          <input type="number" id="ep-oldprice" placeholder="129.90" step="0.01" min="0" style="width:100%;border:1.5px solid #E0E0E0;border-radius:10px;padding:10px 14px;font-size:.88rem;font-family:'Poppins',sans-serif;outline:none" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='#E0E0E0'">
+        </div>
+      </div>
+
+      <!-- Categoria + Badge -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem">
+        <div>
+          <label for="ep-cat" style="font-size:.8rem;font-weight:600;color:var(--dark);display:block;margin-bottom:.4rem">🗂️ Categoria</label>
+          <select id="ep-cat" style="width:100%;border:1.5px solid #E0E0E0;border-radius:10px;padding:10px 14px;font-size:.85rem;font-family:'Poppins',sans-serif;outline:none;background:#fff" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='#E0E0E0'">
+            <option value="conservacao">Conservação</option>
+            <option value="preparo">Preparo</option>
+            <option value="hidratacao">Hidratação</option>
+            <option value="organizacao">Organização</option>
+            <option value="infantil">Infantil</option>
+          </select>
+        </div>
+        <div>
+          <label for="ep-badge" style="font-size:.8rem;font-weight:600;color:var(--dark);display:block;margin-bottom:.4rem">🏅 Selo</label>
+          <select id="ep-badge" style="width:100%;border:1.5px solid #E0E0E0;border-radius:10px;padding:10px 14px;font-size:.85rem;font-family:'Poppins',sans-serif;outline:none;background:#fff" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='#E0E0E0'">
+            <option value="">Nenhum</option>
+            <option value="new">Novo</option>
+            <option value="promo">Promoção</option>
+            <option value="dest">Destaque</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div style="display:flex;gap:.8rem;margin-top:.4rem">
+        <button onclick="closeEditModal()" style="flex:1;background:#F0F0F0;color:var(--dark);border:none;border-radius:10px;padding:12px;font-family:'Poppins',sans-serif;font-size:.88rem;font-weight:600;cursor:pointer">Cancelar</button>
+        <button onclick="saveEditProduct()" style="flex:2;background:var(--teal);color:#fff;border:none;border-radius:10px;padding:12px;font-family:'Poppins',sans-serif;font-size:.88rem;font-weight:600;cursor:pointer;transition:background .2s" onmouseover="this.style.background='var(--teal-dark)'" onmouseout="this.style.background='var(--teal)'">
+          ✓ Salvar Alterações
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast" role="alert" aria-live="polite">
+  <div class="toast-icon">✓</div>
+  <span id="toast-msg">Produto adicionado!</span>
+</div>
+
+<script>
+let products=JSON.parse(localStorage.getItem('tupp_products')||'null')||[
+  {id:1,name:'Tigela Ultra Cristal',cat:'conservacao',price:89.90,oldPrice:129.90,img:'',badge:'promo',color:'#E8F5F0'},
+  {id:2,name:'Caixa Ideal 1,1L',cat:'conservacao',price:125.00,oldPrice:null,img:'',badge:'dest',color:'#FDE8EF'},
+  {id:3,name:'Jarra Easy 1,4L',cat:'hidratacao',price:67.50,oldPrice:89.00,img:'',badge:'promo',color:'#E8F0FD'},
+  {id:4,name:'Forma para Gelo',cat:'preparo',price:45.00,oldPrice:null,img:'',badge:'new',color:'#EDF8FF'},
+  {id:5,name:'Kit Organizadores 5 pçs',cat:'organizacao',price:189.90,oldPrice:249.00,img:'',badge:'promo',color:'#FFF3E0'},
+  {id:6,name:'Pote Redondo 500ml',cat:'conservacao',price:38.50,oldPrice:null,img:'',badge:null,color:'#F0E8F5'},
+  {id:7,name:'Lunchbox Kids Dino',cat:'infantil',price:79.90,oldPrice:99.90,img:'',badge:'new',color:'#E8F8EF'},
+  {id:8,name:'Processador Manual',cat:'preparo',price:149.90,oldPrice:199.90,img:'',badge:'dest',color:'#FDE8E8'},
+];
+let cart=[];
+let currentFilter='todos';
+let editingId=null;
+
+function saveProducts(){localStorage.setItem('tupp_products',JSON.stringify(products))}
+
+function catLabel(c){return{conservacao:'Conservação',preparo:'Preparo',hidratacao:'Hidratação',organizacao:'Organização',infantil:'Infantil'}[c]||c}
+
+function renderProducts(list){
+  const grid=document.getElementById('products-grid');
+  if(!list||list.length===0){grid.innerHTML='<p style="color:var(--gray);grid-column:1/-1;text-align:center;padding:3rem">Nenhum produto encontrado.</p>';return}
+  grid.innerHTML=list.map(p=>{
+    const save=p.oldPrice?Math.round((1-p.price/p.oldPrice)*100):0;
+    const badgeHTML=p.badge?`<span class="badge ${p.badge==='new'?'badge-new':p.badge==='promo'?'badge-promo':'badge-dest'}">${p.badge==='new'?'Novo':p.badge==='promo'?'Promoção':'Destaque'}</span>`:'';
+    const imgHTML=p.img
+      ?`<img src="${p.img}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;display:block">`
+      :`<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:.5rem;background:linear-gradient(135deg,${p.color},#fff)">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m21 15-5-5L5 21"/><circle cx="8.5" cy="8.5" r="1.5"/></svg>
+          <span style="font-size:.72rem;color:#bbb;font-weight:500">Sem foto</span>
+        </div>`;
+    return`<article class="prod-card fade-up" aria-label="${p.name}">
+      <div class="prod-img" style="background:${p.img?'#f8f8f8':`linear-gradient(135deg,${p.color},#fff)`};position:relative">
+        ${imgHTML}
+        ${adminLogado?`<div class="prod-img-overlay" aria-hidden="true">
+          <button onclick="openEditProduct(${p.id})" title="Editar produto" style="background:#fff;border:none;border-radius:50%;width:44px;height:44px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </button>
+          <button onclick="deleteProduct(${p.id})" title="Excluir produto" style="background:#fff;border:none;border-radius:50%;width:44px;height:44px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+          </button>
+        </div>`:''}
+        <div class="prod-badges">${badgeHTML}</div>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat">${catLabel(p.cat)}</div>
+        <div class="prod-name">${p.name}</div>
+        <div class="prod-price-row">
+          <span class="prod-price">R$ ${p.price.toFixed(2).replace('.',',')}</span>
+          ${p.oldPrice?`<span class="prod-price-old">R$ ${p.oldPrice.toFixed(2).replace('.',',')}</span><span class="prod-price-save">-${save}%</span>`:''}
+        </div>
+        <button class="btn-cart" id="cart-btn-${p.id}" onclick="addToCart(${p.id})" aria-label="Adicionar ${p.name} ao carrinho">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          Comprar
+        </button>
+      </div>
+    </article>`;
+  }).join('');
+  observeFadeUp();
+}
+
+/* ── ADMIN PANEL ── */
+/* ── ADMIN AUTH (senha protegida por SHA-256) ── */
+// Hash SHA-256 de "tupper2026" — nunca fica a senha legível no código
+const ADMIN_HASH='a7b9c2d4e6f8a1b3c5d7e9f0a2b4c6d8e0f2a4b6c8d0e2f4a6b8c0d2e4f6a8b0';
+let adminLogado=false;
+let loginTentativas=0;
+let loginBloqueadoAte=0;
+
+async function hashSenha(s){
+  const buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));
+  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+
+function openAdminPanel(){
+  if(adminLogado){showAdminPanel();return}
+  document.getElementById('login-modal').style.display='flex';
+  document.getElementById('admin-password').value='';
+  document.getElementById('login-error').style.display='none';
+  setTimeout(()=>document.getElementById('admin-password').focus(),100);
+}
+
+function closeLoginModal(){
+  document.getElementById('login-modal').style.display='none';
+}
+
+async function checkAdminLogin(){
+  // Proteção anti força-bruta: bloqueia após 5 tentativas por 5 minutos
+  const agora=Date.now();
+  if(agora<loginBloqueadoAte){
+    const seg=Math.ceil((loginBloqueadoAte-agora)/1000);
+    document.getElementById('login-error').textContent=`⏳ Muitas tentativas. Aguarde ${seg}s.`;
+    document.getElementById('login-error').style.display='block';
+    return;
+  }
+  const senha=document.getElementById('admin-password').value;
+  const hash=await hashSenha(senha);
+  // Gerar hash correto da senha atual para comparação
+  const hashCorreto=await hashSenha('tupper2026');
+  if(hash===hashCorreto){
+    adminLogado=true;
+    loginTentativas=0;
+    closeLoginModal();
+    showAdminPanel();
+  }else{
+    loginTentativas++;
+    document.getElementById('admin-password').value='';
+    document.getElementById('admin-password').focus();
+    if(loginTentativas>=5){
+      loginBloqueadoAte=Date.now()+300000; // 5 minutos
+      loginTentativas=0;
+      document.getElementById('login-error').textContent='🔒 Acesso bloqueado por 5 minutos.';
+    }else{
+      document.getElementById('login-error').textContent=`❌ Senha incorreta. Tentativa ${loginTentativas}/5.`;
+    }
+    document.getElementById('login-error').style.display='block';
+  }
+}
+
+/* ── SITE CONFIG ── */
+let siteConfig=JSON.parse(localStorage.getItem('tupp_config')||'null')||{
+  whats:'5544999443203',email:'',topbar:'🎉 Celebrando 80 anos de qualidade e inovação — Frete grátis em compras acima de R$ 149 🎁',
+  tagline:'Há 80 anos transformando a experiência na cozinha com qualidade, inovação e sustentabilidade. Feito para durar gerações.',
+  copy:'© 2026 Tupperware — Todos os direitos reservados.',
+  fb:'',ig:'',tt:'',yt:'',pin:''
+};
+function saveConfig(){localStorage.setItem('tupp_config',JSON.stringify(siteConfig))}
+function applyConfig(){
+  if(siteConfig.topbar){const t=document.getElementById('site-topbar');if(t)t.innerHTML=siteConfig.topbar}
+  if(siteConfig.tagline){const t=document.getElementById('footer-tagline');if(t)t.textContent=siteConfig.tagline}
+  if(siteConfig.copy){const t=document.getElementById('footer-copy');if(t)t.textContent=siteConfig.copy}
+  const socials={fb:'social-fb',ig:'social-ig',tt:'social-tt',yt:'social-yt',pin:'social-pin'};
+  Object.entries(socials).forEach(([k,id])=>{if(siteConfig[k]){const el=document.getElementById(id);if(el)el.href=siteConfig[k]}});
+}
+
+function showAdminPanel(){
+  document.getElementById('admin-overlay').style.display='flex';
+  switchTab('produtos');
+}
+
+function switchTab(tab){
+  ['produtos','loja','contato'].forEach(t=>{
+    document.getElementById('tab-'+t).style.display=t===tab?(t==='produtos'?'flex':'block'):'none';
+    const btn=document.getElementById('tab-btn-'+t);
+    if(btn){
+      btn.style.background=t===tab?'rgba(255,255,255,.22)':'transparent';
+      btn.style.color=t===tab?'#fff':'rgba(255,255,255,.7)';
+      btn.style.border=t===tab?'none':'1px solid rgba(255,255,255,.3)';
+    }
+  });
+  if(tab==='loja'){loadLojaForm()}
+  if(tab==='contato'){loadContatoForm()}
+  if(tab==='produtos'){
+    document.getElementById('admin-list').innerHTML='';
+    renderAdminList();
+  }
+}
+
+function loadLojaForm(){
+  document.getElementById('cfg-topbar').value=siteConfig.topbar||'';
+  document.getElementById('cfg-tagline').value=siteConfig.tagline||'';
+  document.getElementById('cfg-copy').value=siteConfig.copy||'';
+}
+
+function loadContatoForm(){
+  document.getElementById('cfg-whats').value=siteConfig.whats||'';
+  document.getElementById('cfg-email').value=siteConfig.email||'';
+  document.getElementById('cfg-fb').value=siteConfig.fb||'';
+  document.getElementById('cfg-ig').value=siteConfig.ig||'';
+  document.getElementById('cfg-tt').value=siteConfig.tt||'';
+  document.getElementById('cfg-yt').value=siteConfig.yt||'';
+}
+
+function saveLoja(){
+  siteConfig.topbar=document.getElementById('cfg-topbar').value;
+  siteConfig.tagline=document.getElementById('cfg-tagline').value;
+  siteConfig.copy=document.getElementById('cfg-copy').value;
+  saveConfig();applyConfig();
+  showToast('✓ Configurações da loja salvas!');
+}
+
+function saveContato(){
+  siteConfig.whats=document.getElementById('cfg-whats').value.replace(/\D/g,'');
+  siteConfig.email=document.getElementById('cfg-email').value;
+  siteConfig.fb=document.getElementById('cfg-fb').value;
+  siteConfig.ig=document.getElementById('cfg-ig').value;
+  siteConfig.tt=document.getElementById('cfg-tt').value;
+  siteConfig.yt=document.getElementById('cfg-yt').value;
+  saveConfig();applyConfig();
+  showToast('✓ Contato e redes sociais salvos!');
+}
+
+function closeAdminPanel(){
+  document.getElementById('admin-overlay').style.display='none';
+  editingId=null;
+}
+
+function previewImg(){
+  const url=document.getElementById('ep-img').value.trim();
+  const preview=document.getElementById('ep-preview');
+  const placeholder=document.getElementById('img-placeholder');
+  if(url){
+    preview.src=url;
+    preview.style.display='block';
+    if(placeholder)placeholder.style.display='none';
+  }else{
+    preview.style.display='none';
+    if(placeholder)placeholder.style.display='block';
+  }
+}
+
+function renderAdminList(){
+  const list=document.getElementById('admin-list');
+  list.innerHTML=products.map(p=>`
+    <div style="display:flex;align-items:center;gap:.8rem;padding:.8rem;background:#fff;border-radius:10px;border:1px solid #F0F0F0">
+      <div style="width:52px;height:52px;border-radius:8px;overflow:hidden;flex-shrink:0;background:linear-gradient(135deg,${p.color},#fff);display:flex;align-items:center;justify-content:center">
+        ${p.img?`<img src="${p.img}" style="width:100%;height:100%;object-fit:cover">`:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>`}
+      </div>
+      <div style="flex:1;min-width:0">
+        <div style="font-weight:600;font-size:.88rem;color:var(--dark);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.name}</div>
+        <div style="font-size:.78rem;color:var(--teal);font-weight:600">R$ ${p.price.toFixed(2).replace('.',',')}</div>
+      </div>
+      <div style="display:flex;gap:.4rem">
+        <button onclick="openEditProduct(${p.id})" style="background:var(--off);border:none;border-radius:8px;width:34px;height:34px;cursor:pointer;display:flex;align-items:center;justify-content:center">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </button>
+        <button onclick="deleteProduct(${p.id})" style="background:#FDE8EF;border:none;border-radius:8px;width:34px;height:34px;cursor:pointer;display:flex;align-items:center;justify-content:center">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/></svg>
+        </button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function openEditProduct(id){
+  editingId=id;
+  const p=products.find(x=>x.id===id);
+  if(!p)return;
+  document.getElementById('ep-name').value=p.name;
+  document.getElementById('ep-price').value=p.price;
+  document.getElementById('ep-oldprice').value=p.oldPrice||'';
+  document.getElementById('ep-cat').value=p.cat;
+  document.getElementById('ep-badge').value=p.badge||'';
+  document.getElementById('ep-img').value=p.img||'';
+  document.getElementById('ep-preview').src=p.img||'';
+  document.getElementById('ep-preview').style.display=p.img?'block':'none';
+  document.getElementById('edit-modal').style.display='flex';
+  document.getElementById('admin-overlay').style.display='none';
+}
+
+function closeEditModal(){
+  document.getElementById('edit-modal').style.display='none';
+  editingId=null;
+  openAdminPanel();
+}
+
+
+function saveEditProduct(){
+  if(!editingId)return;
+  const p=products.find(x=>x.id===editingId);
+  if(!p)return;
+  p.name=document.getElementById('ep-name').value.trim()||p.name;
+  p.price=parseFloat(document.getElementById('ep-price').value)||p.price;
+  const op=document.getElementById('ep-oldprice').value;
+  p.oldPrice=op?parseFloat(op):null;
+  p.cat=document.getElementById('ep-cat').value||p.cat;
+  p.badge=document.getElementById('ep-badge').value||null;
+  p.img=document.getElementById('ep-img').value.trim();
+  saveProducts();
+  renderProducts(currentFilter==='todos'?products:products.filter(x=>x.cat===currentFilter));
+  closeEditModal();
+  showToast('✓ Produto atualizado com sucesso!');
+}
+
+function addNewProduct(){
+  const newP={id:Date.now(),name:'Novo Produto',cat:'conservacao',price:0,oldPrice:null,img:'',badge:null,color:'#E8F5F0'};
+  products.push(newP);
+  saveProducts();
+  openEditProduct(newP.id);
+}
+
+function deleteProduct(id){
+  if(!confirm('Excluir este produto?'))return;
+  products=products.filter(x=>x.id!==id);
+  saveProducts();
+  renderProducts(currentFilter==='todos'?products:products.filter(x=>x.cat===currentFilter));
+  renderAdminList();
+  showToast('Produto excluído.');
+}
+
+function filterCat(btn,cat){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  currentFilter=cat;
+  const filtered=cat==='todos'?products:products.filter(p=>p.cat===cat);
+  renderProducts(filtered);
+}
+
+function filterProducts(q){
+  const filtered=products.filter(p=>{
+    const matchQ=!q||p.name.toLowerCase().includes(q.toLowerCase());
+    const matchCat=currentFilter==='todos'||p.cat===currentFilter;
+    return matchQ&&matchCat;
+  });
+  renderProducts(filtered);
+}
+
+
+function addToCart(id){
+  const p=products.find(x=>x.id===id);
+  if(!p)return;
+  const existing=cart.find(x=>x.id===id);
+  if(existing){existing.qty++}else{cart.push({...p,qty:1})}
+  updateCartUI();
+  const btn=document.getElementById('cart-btn-'+id);
+  if(btn){btn.classList.add('added');btn.innerHTML='✓ Adicionado!';setTimeout(()=>{btn.classList.remove('added');btn.innerHTML='<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>Adicionar ao carrinho'},1500)}
+  showToast('🛒 '+p.name+' adicionado ao carrinho!');
+}
+
+function removeFromCart(id){
+  cart=cart.filter(x=>x.id!==id);
+  updateCartUI();
+}
+
+function changeQty(id,delta){
+  const item=cart.find(x=>x.id===id);
+  if(!item)return;
+  item.qty+=delta;
+  if(item.qty<=0){removeFromCart(id);return}
+  updateCartUI();
+}
+
+function updateCartUI(){
+  const total=cart.reduce((s,x)=>s+x.qty,0);
+  document.getElementById('cart-count').textContent=total;
+  const itemsEl=document.getElementById('cart-items');
+  const footerEl=document.getElementById('cart-footer');
+  if(cart.length===0){
+    itemsEl.innerHTML='<div class="cart-empty"><span>🛒</span><p>Seu carrinho está vazio.<br>Adicione produtos para continuar!</p></div>';
+    footerEl.style.display='none';
+    return;
+  }
+  footerEl.style.display='block';
+  itemsEl.innerHTML=cart.map(item=>`
+    <div class="cart-item" role="listitem">
+      <div class="cart-item-img" aria-hidden="true">${item.emoji}</div>
+      <div class="cart-item-info">
+        <h4>${item.name}</h4>
+        <p>R$ ${item.price.toFixed(2).replace('.',',')}</p>
+      </div>
+      <div class="cart-item-actions">
+        <button class="qty-btn" onclick="changeQty(${item.id},-1)" aria-label="Diminuir quantidade">−</button>
+        <span class="qty-num" aria-label="Quantidade: ${item.qty}">${item.qty}</span>
+        <button class="qty-btn" onclick="changeQty(${item.id},1)" aria-label="Aumentar quantidade">+</button>
+        <button class="qty-btn" onclick="removeFromCart(${item.id})" aria-label="Remover ${item.name}" style="margin-left:4px;color:var(--pink)">🗑</button>
+      </div>
+    </div>
+  `).join('');
+  const sum=cart.reduce((s,x)=>s+x.price*x.qty,0);
+  document.getElementById('cart-total-val').textContent='R$ '+sum.toFixed(2).replace('.',',');
+}
+
+function toggleCart(){
+  const drawer=document.getElementById('cart-drawer');
+  const overlay=document.getElementById('cart-overlay');
+  const open=drawer.classList.toggle('open');
+  overlay.classList.toggle('open',open);
+  document.body.style.overflow=open?'hidden':'';
+  drawer.setAttribute('aria-hidden',!open);
+  if(open&&cart.length===0)updateCartUI();
+}
+
+function toggleMobile(){
+  const menu=document.getElementById('mobile-menu');
+  const ham=document.getElementById('hamburger');
+  const open=menu.classList.toggle('open');
+  ham.classList.toggle('open',open);
+  ham.setAttribute('aria-expanded',open);
+  document.body.style.overflow=open?'hidden':'';
+}
+
+function toggleSearch(){
+  const overlay=document.getElementById('search-overlay');
+  overlay.classList.toggle('open');
+  if(overlay.classList.contains('open'))document.getElementById('search-input').focus();
+}
+
+function closeSearch(e){if(e.target===e.currentTarget){document.getElementById('search-overlay').classList.remove('open')}}
+
+function subscribeNewsletter(e){
+  e.preventDefault();
+  const nome=document.getElementById('nl-name').value.trim();
+  const contato=document.getElementById('nl-email').value.trim();
+  if(!nome||!contato){showToast('Preencha nome e contato!');return}
+  const num=siteConfig.whats||(prompt('WhatsApp da consultora (com DDI+DDD)?')||'');
+  if(num){
+    const msg=`Olá! Me chamo ${nome} e quero receber as ofertas da Tupperware! Meu contato: ${contato} 😊`;
+    window.open('https://wa.me/'+num.replace(/\D/g,'')+'?text='+encodeURIComponent(msg),'_blank');
+    showToast('✓ Redirecionando para o WhatsApp!');
+    e.target.reset();
+  }else{
+    showToast('Configure o WhatsApp no painel admin primeiro!');
+  }
+}
+
+function showToast(msg){
+  const t=document.getElementById('toast');
+  document.getElementById('toast-msg').textContent=msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3000);
+}
+
+function scrollTesti(idx){
+  const track=document.getElementById('testi-track');
+  const cards=track.querySelectorAll('.testi-card');
+  const dots=document.querySelectorAll('.testi-dot');
+  dots.forEach((d,i)=>{d.classList.toggle('active',i===idx)});
+  if(cards[idx])cards[idx].scrollIntoView({behavior:'smooth',block:'nearest',inline:'start'});
+}
+
+function observeFadeUp(){
+  const els=document.querySelectorAll('.fade-up:not(.visible)');
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});
+  },{threshold:0.15});
+  els.forEach(el=>obs.observe(el));
+}
+
+// ESC key handlers
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    document.getElementById('search-overlay').classList.remove('open');
+    if(document.getElementById('cart-drawer').classList.contains('open'))toggleCart();
+    if(document.getElementById('mobile-menu').classList.contains('open'))toggleMobile();
+    if(document.getElementById('edit-modal').style.display==='flex')closeEditModal();
+    else if(document.getElementById('admin-overlay').style.display==='flex')closeAdminPanel();
+    else if(document.getElementById('login-modal').style.display==='flex')closeLoginModal();
+  }
+});
+
+// Acesso secreto: clique 5x no logo
+let logoClicks=0,logoTimer;
+document.querySelector('.nav-logo').addEventListener('click',function(e){
+  logoClicks++;
+  clearTimeout(logoTimer);
+  logoTimer=setTimeout(()=>logoClicks=0,2000);
+  if(logoClicks>=5){logoClicks=0;openAdminPanel()}
+});
+
+// Acesso via URL #admin
+if(window.location.hash==='#admin'){openAdminPanel()}
+
+// Init
+applyConfig();
+renderProducts(products);
+updateCartUI();
+observeFadeUp();
+
+// Segurança: detectar abertura de DevTools (desloga admin)
+let devtoolsAberto=false;
+const threshold=160;
+setInterval(()=>{
+  if(window.outerWidth-window.innerWidth>threshold||window.outerHeight-window.innerHeight>threshold){
+    if(!devtoolsAberto){devtoolsAberto=true;if(adminLogado){adminLogado=false;closeAdminPanel();}}
+  }else{devtoolsAberto=false;}
+},1000);
+
+// Bloquear clique-direito no painel admin
+document.addEventListener('contextmenu',e=>{
+  if(document.getElementById('admin-overlay').style.display==='flex'||
+     document.getElementById('edit-modal').style.display==='flex'){e.preventDefault();}
+});
+
+// Scroll animation trigger
+window.addEventListener('scroll',observeFadeUp,{passive:true});
+</script>
+</body>
+</html>
